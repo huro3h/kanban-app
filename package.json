@@ -13,6 +13,9 @@
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js"
   },
+  "jest": {
+    "testURL": "http://localhost/"
+  },
   "dependencies": {
     "@vue/test-utils": "^1.2.2",
     "axios": "^0.21.1",

@@ -1,7 +1,9 @@
 <template>
   <button
     :class="classes"
+    :disabled="disabled"
     type="button"
+    @click="handleClick"
   >
     <slot/>
   </button>
@@ -15,6 +17,10 @@ export default {
     type: {
       type: String,
       default: 'button'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -27,10 +33,21 @@ export default {
   },
 
   methods: {
-    // TODO:
+    // Clickイベントを発行
+    handleClick (ev) {
+      this.$emit('click', ev)
+    }
   }
 }
 </script>
 
 <style scoped>
+.kbn-button {
+  padding: .6em 1.3em;
+}
+.kbn-button-text {
+  border: none;
+  padding-right: 0;
+  padding-left: 0;
+}
 </style>

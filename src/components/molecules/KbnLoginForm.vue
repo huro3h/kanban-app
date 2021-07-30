@@ -134,7 +134,7 @@ label {
 }
 input {
   width: 100%;
-  padding: .5em
+  padding: .5em;
   font: inherit;
 }
 ul {

@@ -7,7 +7,7 @@ export default [{
   component: KbnBoardView,
   meta: { requiresAuth: true }
 }, {
-  path: '/',
+  path: '/login',
   component: KbnLoginView
 }, {
   path: '/tasks/:id',
